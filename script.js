@@ -25,15 +25,24 @@ function cardTemplate(p){
   const div = document.createElement('div');
   div.className = 'card';
   div.innerHTML = `
-    <img class="thumb" src="${p.img}" loading="lazy" alt="${p.nome}">
+    <img class="thumb produto-imagem" src="${p.img}" loading="lazy" alt="${p.nome}">
     <div class="info">
       <h3 class="nome">${p.nome}</h3>
       <div class="meta">
         <span class="preco">${p.preco}</span>
         <span class="tag">${p.categoria}</span>
       </div>
+      <button class="add-carrinho" data-nome="${p.nome}" data-preco="${parsePreco(p.preco)}">Adicionar ao Carrinho</button>
     </div>
   `;
+  // Adiciona evento ao botão
+  div.querySelector('.add-carrinho').onclick = () => {
+    const nome = p.nome;
+    const preco = parsePreco(p.preco);
+    carrinho.push({ nome, preco });
+    atualizarCarrinho();
+    alert(`${nome} adicionado ao carrinho!`);
+  };
   return div;
 }
 
@@ -118,6 +127,7 @@ categoria.addEventListener('change', aplicarFiltros);
 /* Inicialização */
 function init(){
   produtosFiltrados = [...PRODUTOS];
+  preencherCategorias();
   carregarMais();
   io.observe(sentinela);
 }
@@ -189,3 +199,15 @@ document.addEventListener('DOMContentLoaded', () => {
     window.open(url, '_blank');
   };
 });
+
+/* Preenche as categorias no select */
+function preencherCategorias() {
+  const categorias = Array.from(new Set(PRODUTOS.map(p => p.categoria).filter(Boolean)));
+  categoria.innerHTML = '<option value="">Todas as categorias</option>';
+  categorias.forEach(cat => {
+    const option = document.createElement('option');
+    option.value = cat;
+    option.textContent = cat.charAt(0).toUpperCase() + cat.slice(1);
+    categoria.appendChild(option);
+  });
+}
