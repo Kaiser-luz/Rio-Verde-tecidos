@@ -47,6 +47,15 @@
     </div>
 
     <div id="lista-produtos" class="grid" aria-live="polite">
+      <!-- Exemplo de como ficará um produto na lista -->
+      <div class="card" aria-labelledby="produto1">
+        <img src="produto-exemplo.jpg" alt="Produto Exemplo" class="produto-imagem" />
+        <div class="info">
+          <span class="nome">Nome do Produto</span>
+          <span class="preco">R$ 99,00</span>
+          <button class="add-carrinho" data-nome="Nome do Produto" data-preco="99.00">Adicionar ao Carrinho</button>
+        </div>
+      </div>
     </div>
 
     <div id="sentinela" class="sentinela" aria-hidden="true"></div>
@@ -54,23 +63,27 @@
 
   <section id="sobre" class="sobre container">
     <h2>Sobre a loja</h2>
-    <p>Sobre Nós – Tecidos e Decorações Rio Verde
-
-    </p>A Tecidos e Decorações Rio Verde (CNPJ: 12.362.843/0001-17) é uma empresa especializada na comercialização de tecidos, artigos para decoração e acessórios, oferecendo produtos de alta qualidade para atender tanto clientes finais quanto profissionais do setor.
-Com anos de experiência no mercado, nosso compromisso é unir bom gosto, variedade e preços competitivos para transformar ambientes com charme e funcionalidade.
-<p>
-Contamos com um amplo catálogo que inclui tecidos para estofados, cortinas, roupas de cama, artesanato e muito mais, além de peças e acessórios para completar qualquer projeto de decoração. Nosso time de profissionais está sempre pronto para oferecer atendimento personalizado, ajudando você a encontrar o produto ideal para cada necessidade.
-
-Na Tecidos e Decorações Rio Verde, acreditamos que cada detalhe faz diferença. Por isso, trabalhamos com fornecedores de confiança e atualizamos constantemente nosso estoque para acompanhar as últimas tendências de design e decoração.
-Seja para renovar sua casa, criar um projeto especial ou investir em um novo visual para seu negócio, estamos aqui para ajudar a transformar ideias em realidade.
-</p>
-<p>
-Missão: Proporcionar produtos e soluções que unam qualidade, beleza e funcionalidade, tornando a decoração e a confecção mais acessíveis e inspiradoras.
-Visão: Ser referência regional em tecidos e decoração, reconhecida pelo atendimento diferenciado e pela variedade de produtos.
-Valores: Qualidade, confiança, atendimento humano, inovação e respeito ao cliente.
-
- Atendimento presencial e vendas online para todo o Brasil.
-Fale conosco e descubra como podemos ajudar a dar vida aos seus projetos</p>
+    <p>
+      <strong>Sobre Nós – Tecidos e Decorações Rio Verde</strong><br>
+      A Tecidos e Decorações Rio Verde (CNPJ: 12.362.843/0001-17) é uma empresa especializada na comercialização de tecidos, artigos para decoração e acessórios, oferecendo produtos de alta qualidade para atender tanto clientes finais quanto profissionais do setor.
+      Com anos de experiência no mercado, nosso compromisso é unir bom gosto, variedade e preços competitivos para transformar ambientes com charme e funcionalidade.
+    </p>
+    <p>
+      Contamos com um amplo catálogo que inclui tecidos para estofados, cortinas, roupas de cama, artesanato e muito mais, além de peças e acessórios para completar qualquer projeto de decoração. Nosso time de profissionais está sempre pronto para oferecer atendimento personalizado, ajudando você a encontrar o produto ideal para cada necessidade.
+    </p>
+    <p>
+      Na Tecidos e Decorações Rio Verde, acreditamos que cada detalhe faz diferença. Por isso, trabalhamos com fornecedores de confiança e atualizamos constantemente nosso estoque para acompanhar as últimas tendências de design e decoração.
+      Seja para renovar sua casa, criar um projeto especial ou investir em um novo visual para seu negócio, estamos aqui para ajudar a transformar ideias em realidade.
+    </p>
+    <p>
+      <strong>Missão:</strong> Proporcionar produtos e soluções que unam qualidade, beleza e funcionalidade, tornando a decoração e a confecção mais acessíveis e inspiradoras.<br>
+      <strong>Visão:</strong> Ser referência regional em tecidos e decoração, reconhecida pelo atendimento diferenciado e pela variedade de produtos.<br>
+      <strong>Valores:</strong> Qualidade, confiança, atendimento humano, inovação e respeito ao cliente.
+    </p>
+    <p>
+      Atendimento presencial e vendas online para todo o Brasil.<br>
+      Fale conosco e descubra como podemos ajudar a dar vida aos seus projetos.
+    </p>
   </section>
 
   <footer id="contato" class="rodape" role="contentinfo">
@@ -82,6 +95,17 @@ Fale conosco e descubra como podemos ajudar a dar vida aos seus projetos</p>
     </div>
     <p class="copy">© 2025 Rio Verde Tecidos & Decorações</p>
   </footer>
+
+  <div id="carrinho-modal" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,.5);z-index:999;align-items:center;justify-content:center;">
+    <div style="background:#fff;padding:24px;border-radius:12px;max-width:400px;width:90%;">
+      <h2>Seu Carrinho</h2>
+      <ul id="carrinho-lista"></ul>
+      <p id="carrinho-total"></p>
+      <button id="enviar-whats">Enviar para WhatsApp</button>
+      <button onclick="document.getElementById('carrinho-modal').style.display='none'">Fechar</button>
+    </div>
+  </div>
+  <button id="abrir-carrinho" style="position:fixed;bottom:24px;right:24px;z-index:998;background:#004b19;color:#fff;padding:12px 20px;border-radius:50px;border:none;box-shadow:0 2px 8px rgba(0,0,0,.15);">🛒 Carrinho</button>
 
   <script src="products.js"></script>
   <script src="script.js"></script>
