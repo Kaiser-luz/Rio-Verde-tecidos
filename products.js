@@ -3,28 +3,28 @@ const PRODUTOS = [
     "id": 1,
     "nome": "Tecido Jeans 001",
     "categoria": "jeans",
-    "preco": "R$ 51,92",
+    "preco": "R$ 35,00",
     "img": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'>  <rect width='100%' height='100%' fill='%23e5e7eb'/>  <text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='28' fill='%236b7280'>Imagem 1</text>  </svg>"
   },
   {
     "id": 2,
     "nome": "Tecido Malha 002",
     "categoria": "malha",
-    "preco": "R$ 32,95",
+    "preco": "R$ 25,00",
     "img": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'>  <rect width='100%' height='100%' fill='%23e5e7eb'/>  <text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='28' fill='%236b7280'>Imagem 2</text>  </svg>"
   },
   {
     "id": 3,
     "nome": "Tecido Seda 003",
     "categoria": "seda",
-    "preco": "R$ 76,85",
+    "preco": "R$ 50,00",
     "img": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'>  <rect width='100%' height='100%' fill='%23e5e7eb'/>  <text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='28' fill='%236b7280'>Imagem 3</text>  </svg>"
   },
   {
     "id": 4,
     "nome": "Tecido Tricoline 004",
     "categoria": "tricoline",
-    "preco": "R$ 61,06",
+    "preco": "R$ 25,00",
     "img": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'>  <rect width='100%' height='100%' fill='%23e5e7eb'/>  <text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='28' fill='%236b7280'>Imagem 4</text>  </svg>"
   },
   {
