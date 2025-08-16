@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tecidos & Decorações — Loja</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Loja de tecidos com variedade em algodão, linho, seda, malha, tricoline e jeans.">
+</head>
+<body>
+  <header class="topbar" role="banner">
+    <div class="brand">
+      <div class="logo" aria-label="Logo">🧵</div>
+      <span class="brand-name">Tecidos & Decorações</span>
+    </div>
+    <nav class="menu" role="navigation" aria-label="principal">
+      <a href="#produtos">Produtos</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <section class="hero" role="region" aria-labelledby="titulo-hero">
+    <div class="hero-content">
+      <h1 id="titulo-hero">Qualidade, variedade e bom preço</h1>
+      <p>Encontre o tecido perfeito para seu projeto.</p>
+    </div>
+  </section>
+
+  <main id="produtos" class="container" role="main">
+    <div class="filtros" role="search">
+      <label class="sr-only" for="busca">Buscar produto</label>
+      <input type="search" id="busca" placeholder="Buscar por nome..." autocomplete="off" />
+      <label class="sr-only" for="categoria">Filtrar por categoria</label>
+      <select id="categoria">
+        <option value="">Todas as categorias</option>
+        <option value="algodao">Algodão</option>
+        <option value="seda">Seda</option>
+        <option value="linho">Linho</option>
+        <option value="malha">Malha</option>
+        <option value="tricoline">Tricoline</option>
+        <option value="jeans">Jeans</option>
+      </select>
+    </div>
+
+    <div id="lista-produtos" class="grid" aria-live="polite">
+      <!-- Cards carregados dinamicamente -->
+    </div>
+
+    <div id="sentinela" class="sentinela" aria-hidden="true"></div>
+  </main>
+
+  <section id="sobre" class="sobre container">
+    <h2>Sobre a loja</h2>
+    <p>Atendemos com carinho e conhecimento para você escolher o tecido ideal.</p>
+  </section>
+
+  <footer id="contato" class="rodape" role="contentinfo">
+    <div>
+      <strong>Endereço:</strong> Avenida Prefeito Erasto Gaertner, 1217 — Curitiba/PR
+    </div>
+    <div>
+      <strong>WhatsApp:</strong> (41) 98849-4471
+    </div>
+    <p class="copy">© 2025 Rio Verde Tecidos & Decorações</p>
+  </footer>
+
+  <script src="products.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
